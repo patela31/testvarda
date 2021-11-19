@@ -10,3 +10,5 @@ variable "keypair" {}
 
 variable "name_prefix" {}
 
+variable "cidr" {}
+
