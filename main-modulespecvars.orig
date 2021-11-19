@@ -27,9 +27,9 @@ module "aviatrix-iam-roles" {
 
 module "aviatrix-controller-build" {
   source  = "./mgmt-modules/aviatrix-controller-build"
-  keypair = var.keypair
+  keypair = aws_key_pair.avx_key.key_name
   ec2role = module.aviatrix-iam-roles.aviatrix-role-ec2-name
-  cidr    = var.cidr
+  cidr    = "10.100.0.0/16"
   region  = var.region
 }
 
